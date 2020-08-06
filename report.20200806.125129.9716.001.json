@@ -1,0 +1,297 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "location": "OnFatalError",
+    "filename": "report.20200806.125129.9716.001.json",
+    "dumpEventTime": "2020-08-06T12:51:29Z",
+    "processId": 9716,
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\\\node.exe",
+      "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npx-cli.js",
+      "@11ty/eleventy",
+      "--serve"
+    ],
+    "nodejsVersion": "v11.10.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "11.10.0",
+      "v8": "7.0.276.38-node.17",
+      "uv": "1.26.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "67",
+      "nghttp2": "1.34.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1a",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v11.10.0/node-v11.10.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v11.10.0/node-v11.10.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v11.10.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "6.1.7601",
+    "osVersion": "Windows 7 Enterprise Service Pack 1",
+    "osMachine": "x86_64",
+    "host": "EFR00536"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x000000013fdbdd6e",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+9902"
+    },
+    {
+      "pc": "0x000000013fdbcc36",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+5494"
+    },
+    {
+      "pc": "0x000000013fdbc4a2",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+3554"
+    },
+    {
+      "pc": "0x000000013feba3ed",
+      "symbol": "uv_loop_fork+83805"
+    },
+    {
+      "pc": "0x00000001402b0f1e",
+      "symbol": "v8::internal::FatalProcessOutOfMemory+798"
+    },
+    {
+      "pc": "0x00000001402b0e57",
+      "symbol": "v8::internal::FatalProcessOutOfMemory+599"
+    },
+    {
+      "pc": "0x0000000140360e74",
+      "symbol": "v8::internal::Heap::RootIsImmortalImmovable+14900"
+    },
+    {
+      "pc": "0x0000000140356994",
+      "symbol": "v8::internal::Heap::CollectGarbage+7556"
+    },
+    {
+      "pc": "0x0000000140355068",
+      "symbol": "v8::internal::Heap::CollectGarbage+1112"
+    },
+    {
+      "pc": "0x000000014035eab7",
+      "symbol": "v8::internal::Heap::RootIsImmortalImmovable+5751"
+    },
+    {
+      "pc": "0x000000014035eb36",
+      "symbol": "v8::internal::Heap::RootIsImmortalImmovable+5878"
+    },
+    {
+      "pc": "0x00000001404e78e1",
+      "symbol": "v8::internal::Factory::NewFillerObject+49"
+    },
+    {
+      "pc": "0x00000001405a0cea",
+      "symbol": "v8::internal::StoreBuffer::StoreBufferOverflow+27082"
+    },
+    {
+      "pc": "0x000002e76fd50461",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1495973888,
+    "totalCommittedMemory": 1495973888,
+    "usedMemory": 1459762456,
+    "availableMemory": 33565800,
+    "memoryLimit": 1526909922,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 524288,
+        "capacity": 515584,
+        "used": 33520,
+        "available": 482064
+      },
+      "new_space": {
+        "memorySize": 4194304,
+        "committedMemory": 4194304,
+        "capacity": 2062336,
+        "used": 229560,
+        "available": 1832776
+      },
+      "old_space": {
+        "memorySize": 1482887168,
+        "committedMemory": 1482887168,
+        "capacity": 1454085848,
+        "used": 1453480648,
+        "available": 605200
+      },
+      "code_space": {
+        "memorySize": 2097152,
+        "committedMemory": 2097152,
+        "capacity": 1797408,
+        "used": 1797408,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1585152,
+        "committedMemory": 1585152,
+        "capacity": 906160,
+        "used": 906160,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 4685824,
+        "committedMemory": 4685824,
+        "capacity": 33960920,
+        "used": 3315160,
+        "available": 30645760
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      }
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=::": "::\\",
+    "=C:": "C:\\Utilisateurs\\fr20196\\Documents\\GitHub\\webstories",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Utilisateurs\\fr20196\\AppData\\Roaming",
+    "BOOT2DOCKER_ROOT": "C:\\wl-vagrant\\wl-boot2docker",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "ven. févr. 15 15:34:05 2019",
+    "CMDER_INSTDIR": "C:\\wl-vagrant\\cmder_mini",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "EFR00536",
+    "ComSpec": "C:\\Windows\\system32\\cmd.exe",
+    "DEFLOGDIR": "C:\\ProgramData\\McAfee\\DesktopProtection",
+    "DOCKER4WL_ROOT": "C:\\docker4wl\\docker4wl-workspace",
+    "DOCKER_HOST": "tcp://127.0.0.1:2375",
+    "FP_NO_HOST_CHECK": "NO",
+    "HOME": "C:\\Utilisateurs\\fr20196",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Utilisateurs\\fr20196",
+    "HTTPS_PROXY": "http://proxy-internet.localnet:3128",
+    "HTTP_PROXY": "http://proxy-internet.localnet:3128",
+    "JAVA_HOME": "C:\\Program Files (x86)\\Java\\jdk1.8.0_91",
+    "LOCALAPPDATA": "C:\\Utilisateurs\\fr20196\\AppData\\Local",
+    "LOGONSERVER": "\\\\FRVDA001",
+    "NODE_EXE": "C:\\Program Files\\nodejs\\\\node.exe",
+    "NO_PROXY": "localhost, .priv.atos.fr,127.0.0.1,.meshcore.net",
+    "NPM_CLI_JS": "C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npm-cli.js",
+    "NPM_PREFIX_NPX_CLI_JS": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npx-cli.js",
+    "NPX_CLI_JS": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npx-cli.js",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OS": "Windows_NT",
+    "Path": "C:\\Utilisateurs\\fr20196\\Documents\\GitHub\\webstories\\node_modules\\.bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;c:\\Python27\\;c:\\Python27\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\RSA SecurID Token Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseHg\\;C:\\opscode\\chefdk\\bin\\;C:\\Program Files\\apache-maven-3.3.9\\bin;C:\\HashiCorp\\Vagrant\\bin;C:\\wl-vagrant\\cwRsync;C:\\wl-vagrant\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Utilisateurs\\fr20196\\AppData\\Local\\atom\\bin;C:\\Program Files\\apache-maven-3.3.9\\bin;C:\\Program Files\\Git\\bin;C:\\Utilisateurs\\fr20196\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Utilisateurs\\fr20196\\AppData\\Roaming\\npm",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 69 Stepping 1, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "4501",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\;C:\\opscode\\chefdk\\modules\\;C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\PowerShell\\",
+    "PUBLIC": "C:\\Utilisateurs\\Public",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\Windows",
+    "TEMP": "c:\\TEMP_2",
+    "TMP": "c:\\TEMP_2",
+    "UATDATA": "C:\\Windows\\CCM\\UATData\\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77",
+    "USERDNSDOMAIN": "FR01.AWL.ATOSORIGIN.NET",
+    "USERDOMAIN": "FR01_AWL",
+    "USERDOMAIN_ROAMINGPROFILE": "FR01_AWL",
+    "USERNAME": "FR20196",
+    "USERPROFILE": "C:\\Utilisateurs\\fr20196",
+    "VAGRANT_HOME": "C:\\Utilisateurs\\fr20196\\.vagrant.d",
+    "VAGRANT_HTTPS_PROXY": "http://proxy-internet.localnet:3128",
+    "VAGRANT_HTTP_PROXY": "http://proxy-internet.localnet:3128",
+    "VAGRANT_NO_PROXY": "localhost,.priv.atos.fr,127.0.0.1,10.0.2.15,.meshcore.net",
+    "VBOX_MSI_INSTALL_PATH": "C:\\Program Files\\Oracle\\VirtualBox\\",
+    "VBOX_USER_HOME": "C:\\Utilisateurs\\fr20196\\.Virtualbox",
+    "VSEDEFLOGDIR": "C:\\ProgramData\\McAfee\\DesktopProtection",
+    "WallpaperPath": "C:\\Windows\\Web\\Wallpaper\\Worldline\\Worldline.jpg",
+    "wget": "c:\\wget\\wget",
+    "windir": "C:\\Windows",
+    "windows_tracing_flags": "3",
+    "windows_tracing_logfile": "C:\\BVTBin\\Tests\\installpackage\\csilogfile.log"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Windows\\system32\\kernel32.dll",
+    "C:\\Windows\\system32\\KERNELBASE.dll",
+    "C:\\Windows\\system32\\PSAPI.DLL",
+    "C:\\Windows\\system32\\WS2_32.dll",
+    "C:\\Windows\\system32\\msvcrt.dll",
+    "C:\\Windows\\system32\\RPCRT4.dll",
+    "C:\\Windows\\system32\\NSI.dll",
+    "C:\\Windows\\system32\\dbghelp.dll",
+    "C:\\Windows\\system32\\ADVAPI32.dll",
+    "C:\\Windows\\SYSTEM32\\sechost.dll",
+    "C:\\Windows\\system32\\USER32.dll",
+    "C:\\Windows\\system32\\GDI32.dll",
+    "C:\\Windows\\system32\\LPK.dll",
+    "C:\\Windows\\system32\\USP10.dll",
+    "C:\\Windows\\system32\\IPHLPAPI.DLL",
+    "C:\\Windows\\system32\\WINNSI.DLL",
+    "C:\\Windows\\system32\\USERENV.dll",
+    "C:\\Windows\\system32\\profapi.dll",
+    "C:\\Windows\\system32\\CRYPT32.dll",
+    "C:\\Windows\\system32\\MSASN1.dll",
+    "C:\\Windows\\system32\\bcrypt.dll",
+    "C:\\Windows\\system32\\WINMM.dll",
+    "C:\\Windows\\system32\\IMM32.DLL",
+    "C:\\Windows\\system32\\MSCTF.dll",
+    "C:\\Windows\\system32\\nvinitx.dll",
+    "C:\\Windows\\system32\\VERSION.dll",
+    "C:\\Program Files\\NVIDIA Corporation\\CoProcManager\\detoured.dll",
+    "C:\\Program Files\\NVIDIA Corporation\\CoProcManager\\nvd3d9wrapx.dll",
+    "C:\\Windows\\system32\\SETUPAPI.dll",
+    "C:\\Windows\\system32\\CFGMGR32.dll",
+    "C:\\Windows\\system32\\OLEAUT32.dll",
+    "C:\\Windows\\system32\\ole32.dll",
+    "C:\\Windows\\system32\\DEVOBJ.dll",
+    "C:\\Program Files\\NVIDIA Corporation\\CoProcManager\\nvdxgiwrapx.dll",
+    "C:\\Windows\\system32\\api-ms-win-core-synch-l1-2-0.DLL",
+    "C:\\Windows\\system32\\powrprof.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\wshtcpip.dll",
+    "C:\\Windows\\System32\\wship6.dll",
+    "C:\\Windows\\system32\\bcryptprimitives.dll",
+    "C:\\Windows\\system32\\dhcpcsvc.DLL",
+    "C:\\Windows\\system32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\system32\\CRYPTBASE.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\system32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\system32\\wshbth.dll"
+  ]
+}
