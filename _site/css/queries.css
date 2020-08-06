@@ -1,0 +1,131 @@
+/* --------------------------------------------------------------------
+               			WEBSTORIES
+               		Media Queries
+-------------------------------------------------------------------- */
+
+@media screen and (min-width: 500px) {
+
+		header {text-align: left; margin-top: 10vh;}
+		h1 img {
+			float: left;
+			width: 150px;
+			margin-right: 1rem;
+		}
+		[role="doc-subtitle"] {
+			font-size: 0.9em;
+			text-align: left;
+		}
+		nav li {font-size: 1em;}
+
+		p.date {top: 14vw;}
+		div.highlight {
+			max-width: 58em;
+			margin: 20vh 0 0vh calc(1rem + 150px);
+		}
+			div.highlight p {font-size: calc(1.1em + 2vw);}
+
+		div.list-of-speakers article {
+			padding: 2rem;
+		}
+		div.list-of-speakers .photo {width: 200px;}
+		div.list-of-speakers h3 {
+		}
+		div.list-of-speakers div.content {
+			margin-top: 58px;
+		}
+		aside.h-event p.p-date {font-size: 1.1em;}
+		aside.h-event ul::before {
+			top: 42px;
+			left: -141px;
+			transform: rotate(-99deg) scale(1.5);
+		}
+}
+
+@media screen and (min-width: 1100px) {
+	#container {padding-top: 6rem;}
+	header {margin: 6rem 5% 0;}
+	main {margin: 0 5%;}
+	#wrapper {padding-bottom: 0;}
+
+	h1 {font-size: 3rem;}
+	[role="doc-subtitle"] {font-size: 1.2em;}
+
+	.skip-link a:focus {
+		top: 1rem;
+		height: auto;
+		width: auto;
+	}
+	nav {
+		top: 0;
+		bottom: auto;
+	}
+		nav ul {
+			justify-content: flex-end;
+			flex-flow: row-reverse;
+			background-position: 0 -61px;
+			background-size: cover;
+			padding: 2rem 0;
+			transform: rotate(180deg);
+		}
+		nav li {
+			flex: initial;
+			position: relative;
+			font-size: 1.1em;
+			margin-left: 5%;
+			transform: rotate(-180deg);
+			z-index: 112;
+		}
+
+	section {padding-top: 10rem;}
+	section .go-top {top: 75px;}
+
+	div.presentation {
+		width: 45em;
+		text-align: center;
+		margin: 0 auto 2rem;
+	}
+		div.presentation p {font-size: 1.1em;}
+
+	p.date {
+		top: -20px;
+		left: auto;
+		right: 5%;
+		font-size: 1.3em;
+		z-index: 1;
+	}
+	p.date::before {
+		top: 0;
+		left: -10px;
+    transform: rotate(90deg) skew(33deg);
+	}
+		div.list-of-speakers {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		div.list-of-speakers article {
+			flex: 1;
+			margin: 1.5rem;
+		}
+		div.highlight a, div.highlight a:visited {font-size: 1.2rem;}
+		aside.h-event ul::before {
+	    top: -143px;
+	    left: -220px;
+	    transform: rotate(-33deg) scale(2.5);
+	}
+}
+
+
+@media screen and (min-width: 1500px) {
+	header, main {
+		max-width: 1400px;
+	}
+	header {margin: 6rem auto 0;}
+	main {margin: 0 auto;}
+
+	section h2 {font-size: 2.5em;}
+	div.presentation p {font-size: 1.3em;}
+
+	aside.h-event p, aside.h-event li {font-size: 1.2em;}
+	aside.h-event p.p-date {font-size: 1.5em;}
+}

@@ -1,0 +1,17 @@
+/* --------------------------------------------------------------------
+               			WEBSTORIES 2021
+/*-------------------------------------------------------------------- */
+
+:root {
+	--body-text: #FFF;
+	--body-bg: #06222B;
+	--text-inv: #06222B;
+
+	--main-color: #F57F20;
+	--sec-color: #CD2032;
+	--ter-color: #0BA992;
+
+  --stack: bai_jamjureeregular, "Century Gothic", Roboto, Avenir, sans-serif;
+	--stack-b: bai_jamjureebold, "Century Gothic", Roboto, Avenir, sans-serif;
+	--stack-l: bai_jamjureelight, "Century Gothic", Roboto, Avenir, sans-serif;
+}

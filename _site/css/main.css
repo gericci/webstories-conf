@@ -1,0 +1,439 @@
+/* --------------------------------------------------------------------
+               			WEBSTORIES
+               		Main style-sheet
+-------------------------------------------------------------------- */
+@import 'vars.css';
+
+
+/* ------------------------------ RESET ---------------------------- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, big, cite, code,
+del, dfn, em, form, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {overflow-y: scroll; scroll-behavior: smooth;}
+
+header, footer, main, nav, aside, article, section, figure, figcaption {
+  display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+/* ------------------------------ DEFAULTS ---------------------------- */
+@font-face {
+    font-family: 'bai_jamjureebold';
+    src: url('baijamjuree-bold-webfont.woff2') format('woff2'),
+         url('baijamjuree-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bai_jamjureelight';
+    src: url('baijamjuree-light-webfont.woff2') format('woff2'),
+         url('baijamjuree-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bai_jamjureeregular';
+    src: url('baijamjuree-regular-webfont.woff2') format('woff2'),
+         url('baijamjuree-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font: 100%/1.45 var(--stack);
+	color: var(--body-text);
+	background-color: var(--body-bg);
+}
+
+img {max-width: 100%; border: none;}
+
+header {
+	text-align: center;
+	margin: 5vh 10%;
+	transition: all .3s;
+}
+
+main {margin: 0 10%;}
+
+footer {
+	font-size: 0.9em;
+	text-align: center;
+	padding: 2.5vh 0;
+	margin: 5vh 0;
+}
+
+section {margin: 5vh 0 10vh;}
+
+h1 {
+	font: normal 2.6em var(--stack);
+	color: rgba(255,255,255, 0.7);
+	background-color: var(--body-bg);
+}
+
+	h1 img {
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+		transition: all .5s;
+	}
+	h1 span {color: var(--main-color); background-color: var(--body-bg);}
+
+[role=doc-subtitle] {font-size: 0.8em;}
+
+h2 {
+	font: normal 1.8em var(--stack-l);
+	color: var(--main-color);
+	background-color: var(--body-bg);
+}
+
+strong {
+	font-family: var(--stack-b);
+	font-weight: normal;
+}
+
+/* ------------------------- ANIMATIONS ---------------------------- */
+
+@keyframes navlinkOut {
+	0% {transform: scale(1); background-color: var(--main-color); opacity: 1;}
+	100% {transform: scale(2); background-color: var(--main-color); opacity: 0;}
+}
+@keyframes navlinkIn {
+	0% {transform: scale(1); opacity: 0.3;}
+	100% {transform: scale(0.5); opacity: 1;}
+}
+@keyframes navL {
+	0% {transform: rotate(0) scale(0.5); opacity: 0.7;}
+	100% {transform: rotate(360deg) scale(1); opacity: 1;}
+}
+
+/* ------------------------- STRUCTURE ---------------------------- */
+
+#wrapper {
+	padding-bottom: 5rem;
+}
+
+/* ------------------------- NAVIGATION ---------------------------- */
+
+.skip-link {display: inline;}
+
+	.skip-link a {
+		position: absolute;
+		overflow: hidden;
+		left: 5%;
+		top: -50rem;
+		width: 1px;
+		height: 1px;
+		background: none;
+		z-index: 120;
+	}
+
+nav {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+}
+	nav h2 {font-size: 1em; margin-bottom: 1em;}
+
+	nav ul {
+		display: flex;
+		justify-content: center;
+		list-style-type: none;
+		color: var(--body-text);
+		background: var(--body-bg) url(../img/background.svg) bottom no-repeat;
+		padding: 2.8vh 0 2.5vh;
+	}
+	nav li {
+		flex: 1;
+		font: 0.95em/1 var(--stack);
+		text-transform: lowercase;
+		text-align: center;
+	}
+
+	nav a, nav a:visited {
+		display: block;
+		position: relative;
+		color: var(--body-text);
+		background-color: transparent;
+		text-decoration: none;
+	}
+
+/*
+	nav li a::before {
+		display: block;
+		position: relative;
+		content: "";
+		top: -5px;
+		width: 30px;
+		height: 30px;
+		background-image: linear-gradient(45deg, var(--ter-color) 50%, transparent 50%);
+		margin: 0 auto;
+		opacity: 0.7;
+	}
+	nav li:nth-child(2) a::before {
+		background-image: linear-gradient(45deg, var(--sec-color) 50%, transparent 50%);
+	}
+	nav li:nth-child(3) a::before {
+		background-image: linear-gradient(45deg, var(--body-text) 50%, transparent 50%);
+	}
+	nav a:hover::before {
+		animation-delay: 0;
+		animation-duration: 0.5s;
+		animation-name: navL;
+	}
+	nav li a::before, nav li a::after {
+		display: block;
+		content: "";
+		margin: 0 auto;
+		border-radius: 100%;
+	}
+	nav a::before {
+		position: relative;
+		top: -3px;
+		width: 44px;
+		height: 44px;
+		background-color: rgba(255,255,255,0.3);
+	}
+	nav a::after {
+		position: absolute;
+		top: 8px;
+		left: calc(50% - 11px);
+		width: 22px;
+		height: 22px;
+		background-color: rgba(255,255,255,0.6);
+	}
+
+nav a:hover::before {
+	animation-delay: 0;
+	animation-duration: 0.5s;
+	animation-name: navlinkIn;
+}
+nav a:hover::after {
+	animation-delay: 0;
+	animation-duration: 0.5s;
+	animation-name: navlinkOut;
+}
+nav a:focus::after {background-color: var(--main-color);}*/
+
+/* ------------------------- GENERAL ---------------------------- */
+
+section {
+	position: relative;
+	padding-top: 4rem;
+}
+	section h2 {text-align: center; margin-bottom: 1em;}
+	section .go-top {
+		position: absolute;
+		width: 44px;
+		top: 0;
+		left: calc(50% - 22px);
+		padding-top: 1rem;
+	}
+		section .go-top a {opacity: 0.7;}
+		section .go-top a:hover, section .go-top a:focus {opacity: 1;}
+
+article p + p {margin-top: 0.8em;}
+
+aside.h-event {
+	display: flex;
+	flex-flow: column;
+	background-color: rgba(11,169,146,0.3);
+	padding: 5vh 10%;
+}
+	aside.h-event h2 {
+		background-color: rgba(11,169,146,0);
+		margin-bottom: 1em;
+	}
+	aside.h-event p {font: 0.95em/1.45 var(--stack-l);}
+	aside.h-event p.p-date {
+		font-family: var(--stack-b);
+		margin-top: 0.8em;
+	}
+
+	aside.h-event .content {max-width: 35em;}
+
+	aside.h-event ul {
+		align-self: flex-end;
+		position: relative;
+		list-style-type: none;
+		padding-left: 1rem;
+		margin: 5vh 0 0 0;
+		border-left: 5px solid var(--main-color);
+	}
+	aside.h-event ul::before {
+		display: block;
+		position: absolute;
+		/*content: "";*/
+		top: -11px;
+		left: -118px;
+		width: 80px;
+		height: 160px;
+		background-image: linear-gradient(64deg, transparent 50%, var(--main-color) 50%);
+		margin: 0 auto;
+		opacity: 0.3;
+		transform: rotate(-90deg);
+		transition: all .5s;
+	}
+
+	aside.h-event a, aside.h-event a:visited {
+		display: inline-block;
+		color: var(--body-text);
+		padding: 0.3em 0;
+	}
+	aside.h-event a:hover {text-decoration: none;}
+
+/* ------------------------- EDITORIAl ---------------------------- */
+
+article.editorial {margin: 5vh 0;}
+
+	article.editorial h2 {margin: 0 0 1em;}
+	article.editorial p + p, article.editorial li + li {margin-top: 0.8em;}
+	article.editorial ul {margin: 1em;}
+
+
+/* ------------------------- HOME ---------------------------- */
+
+div.intro {height: 100vh;}
+
+p.date {
+	position: absolute;
+	top: 39vw;
+	left: 0;
+	font-size: 1em;
+	line-height: 1;
+	color: var(--main-color);
+	background-color: transparent;
+	transform: rotate(-15deg);
+	transition: all .5s;
+}
+
+	p.date strong {display: block;}
+
+	p.date::before {
+		display: block;
+		position: relative;
+		content: "";
+		top: 89px;
+		left: -47px;
+		width: 100px;
+		height: 200px;
+		background-image: linear-gradient(64deg, transparent 50%, var(--ter-color) 50%);
+		margin: 0 auto;
+		opacity: 0.3;
+		transform: rotate(-66deg);
+	}
+
+div.highlight {
+	margin: 2vh 0 10vh 44vw;
+	transition: all .5s;
+}
+	div.highlight p {font-size: 1.1em;}
+	div.highlight a, div.highlight a:visited {
+		display: inline-block;
+		position: relative;
+		font: 1rem/1 var(--stack-b);
+		text-decoration: none;
+		color: var(--body-text);
+		background-color: var(--main-color);
+		padding: 0.8em 1em;
+		margin-top: 2em;
+		transition: all .5s;
+	}
+	div.highlight a::before {
+		display: block;
+		position: absolute;
+		content: "";
+		top: 13px;
+		right: 0;
+		width: 25px;
+		height: 50px;
+		background-image: linear-gradient(64deg, transparent 50%, var(--ter-color) 50%);
+		margin: 0 auto;
+		opacity: 0.3;
+		transform: rotate(81deg);
+		transition: all .2s;
+	}
+
+	div.highlight a:focus {
+		color: var(--main-color);
+		background-color: var(--body-text);
+	}
+	div.highlight a:hover {
+		color: var(--main-color);
+		background-color: var(--body-text);
+	}
+	div.highlight a:hover::before {
+		background-image: linear-gradient(64deg, transparent 50%, var(--main-color) 50%);
+		transform: rotate(90deg);
+	}
+
+div.list-of-speakers article {
+	max-width: 300px;
+	color: var(--body-bg);
+	background-color: var(--body-text);
+	padding: 1rem;
+	margin: 2rem 0;
+	background: var(--body-text) url(../img/background.svg) bottom no-repeat;
+	background-size: contain;
+}
+
+div.list-of-speakers p {font-size: 0.9em;}
+div.list-of-speakers .photo {
+	margin: 1rem auto;
+	filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.5));
+}
+div.list-of-speakers .photo::before {
+	display: block;
+	position: absolute;
+	content: "";
+	top: 29px;
+	right: 7px;
+	width: 50%;
+	height: 80%;
+	background-image: linear-gradient(-64deg, var(--ter-color) 50%, transparent 50%);
+	opacity: 0.2;
+	transition: all .2s;
+}
+
+	div.list-of-speakers .photo img {
+		clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+	}
+
+div.comment {
+	font-family: var(--stack-l);
+	text-align: center;
+	background: url(../img/webstories-logo.svg) top center no-repeat;
+	background-size: 15px 16px;
+	padding-top: 1rem;
+	margin-top: 1rem;
+}
+
+div.list-of-speakers div.comment p {font-size: 0.95em;}
+
+
+/* ------------------------- INNER PAGES ---------------------------- */
+
+#inner h1 {font-size: 2em;}
+	#inner h1 img {width: 60px; margin: 0 1rem 0 0;}
+	#inner h1 a {
+		display: flex;
+		text-decoration: none;
+		color: rgba(255,255,255,0.7);
+	}

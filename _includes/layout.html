@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="{{ base }}img/favicon.png" />
+	<title>{{ title }} : WebStories Conference - Lille</title>
+	<link rel="preload" href="{{ base }}css/lato-regular-webfont.woff2" as="font" type="font/woff2">
+	<!-- STYLESHEET -->
+	<link href="{{ base }}css/main.css" rel="stylesheet" media="all" />
+	<link href="{{ base }}css/queries.css" rel="stylesheet" media="all" />
+</head>
+
+<body>
+
+  <div id="container">
+		<header>
+		<h1><img src="img/webstories-logo.svg" alt="" /> <span>web</span>stories</h1>
+		<p role="doc-subtitle">The Web Conference at the Heart of Europe</p>
+		<nav id="main-nav">
+			<h2 class="skip-link"><a href="#wrapper">Main sections (Skip menu)</a></h2>
+			<ul>
+				<li><a href="#speakers" {% if category == 'speakers' %}aria-current="page"{% endif %}>
+					Speakers</a></li>
+				<li><a href="#agenda" {% if category == 'agenda' %}aria-current="page"{% endif %}>
+					Agenda</a></li>
+				<li><a href="#about" {% if category == 'about' %}aria-current="page"{% endif %}>
+					About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <div id="wrapper">
+      <main>
+      	{{ content }}
+      </main>
+
+			<aside id="about" class="h-event">
+				<h2 class="p-name">About <strong>WebStories</strong> Lille</h2>
+				<div class="content">
+					<p class="p-summary">
+						We are four friends passionate about all things web and who, once, dreamed to have
+						in Lille a one-day, one-track conference with the most diverse and percutant speakers.
+					</p>
+				  <p class="p-date"><time class="dt-start" datetime="2021-02-05">February 5, 2021</time>
+				    at the <span class="p-location">Commerce Chamber of Lille - FRANCE</span></p>
+				</div>
+				<ul>
+					<li><a href="#">Register</a></li>
+					<li><a href="code-of-conduct.html">Code of Conduct</a></li>
+					<li><a href="mailto:contact@webstoriesconf.com">Contact</a></li>
+				</ul>
+			  <p class="go-top"><a href="#container"><img src="img/go-top.svg" alt="Go to top of the page" /></a></p>
+			</aside>
+
+	    <footer>
+	      <p class="copyright">&copy; WebStories Lille, 2021</p>
+	    </footer>
+    </div>
+  </div>
+	<p class="go-top"><a href="#container">Top</a></p>
+
+	<!-- Here go your plugins -->
+	{% if altscript %}
+		{% for s in altscript %}
+	  	<script src="{{ base }}js/{{ s }}.js"></script>
+		{% endfor %}
+	{% endif %}
+	<script src="{{ base }}js/load.js"></script>
+</body>
+</html>
