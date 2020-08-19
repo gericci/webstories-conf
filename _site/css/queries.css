@@ -3,6 +3,13 @@
                		Media Queries
 -------------------------------------------------------------------- */
 
+@media screen and (min-width: 400px) {
+	div.highlight {
+		text-align: left;
+		margin: 2vh 0 10vh 35vw;
+		}
+}
+
 @media screen and (min-width: 500px) {
 
 		header {text-align: left; margin-top: 10vh;}
@@ -22,7 +29,7 @@
 			max-width: 58em;
 			margin: 20vh 0 0vh calc(1rem + 150px);
 		}
-			div.highlight p {font-size: calc(1.1em + 2vw);}
+			div.highlight p:not(.register) {font-size: calc(1.1em + 2vw);}
 
 		div.list-of-speakers article {
 			padding: 2rem;

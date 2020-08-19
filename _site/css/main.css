@@ -349,11 +349,19 @@ p.date {
 	}
 
 div.highlight {
-	margin: 2vh 0 10vh 35vw;
+	text-align: center;
+	margin: 20vh 0 0 0;
 	transition: all .5s;
 }
-	div.highlight p {font-size: 1.1em;}
-	div.highlight a, div.highlight a:visited {
+	div.highlight p:not(.register) {font-size: 1.1em;}
+
+	div.highlight p.register {font-size: 80%; margin-top: 2rem;}
+
+		div.highlight p.register a, div.highlight p.register a:visited {
+			color: var(--body-text);
+		}
+
+	div.highlight a.registration, div.highlight a.registration:visited {
 		display: inline-block;
 		position: relative;
 		font: 1rem/1 var(--stack-b);
@@ -364,7 +372,7 @@ div.highlight {
 		margin-top: 2em;
 		transition: all .5s;
 	}
-	div.highlight a::before {
+	div.highlight a.registration::before {
 		display: block;
 		position: absolute;
 		content: "";
@@ -379,15 +387,15 @@ div.highlight {
 		transition: all .2s;
 	}
 
-	div.highlight a:focus {
+	div.highlight a.registration:focus {
 		color: var(--main-color);
 		background-color: var(--body-text);
 	}
-	div.highlight a:hover {
+	div.highlight a.registration:hover {
 		color: var(--main-color);
 		background-color: var(--body-text);
 	}
-	div.highlight a:hover::before {
+	div.highlight a.registration:hover::before {
 		background-image: linear-gradient(64deg, transparent 50%, var(--main-color) 50%);
 		transform: rotate(90deg);
 	}
@@ -435,6 +443,12 @@ div.comment {
 }
 
 div.list-of-speakers div.comment p {font-size: 0.95em;}
+
+p.social {
+	font-size: 0.9em;
+	text-align: center;
+	margin-top: 1rem;
+}
 
 
 /* ------------------------- INNER PAGES ---------------------------- */
