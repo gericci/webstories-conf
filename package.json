@@ -1,7 +1,7 @@
 {
   "name": "webstories",
   "version": "1.0.0",
-  "description": "",
+  "description": "These are the original sources for the WebStories Conference Site.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gericci/webstories-conf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gericci/webstories-conf/issues"
+  },
+  "homepage": "https://github.com/gericci/webstories-conf#readme"
 }

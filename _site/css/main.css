@@ -433,6 +433,8 @@ div.list-of-speakers .photo::before {
 		clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
 	}
 
+	div.list-of-speakers a:link {color: var(--body-bg);}
+
 div.comment {
 	font-family: var(--stack-l);
 	text-align: center;

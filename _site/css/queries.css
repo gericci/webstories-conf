@@ -60,6 +60,8 @@
 	h1 {font-size: 3rem;}
 	[role="doc-subtitle"] {font-size: 1.2em;}
 
+	div.list-of-speakers p {font-size: 1em;}
+
 	.skip-link a:focus {
 		top: 1rem;
 		height: auto;
@@ -112,10 +114,15 @@
 			flex-wrap: wrap;
 			justify-content: space-between;
 		}
+		div.list-of-speakers div.content {margin: 1rem 0 3rem;}
 		div.list-of-speakers article {
 			flex: 1;
+			display: flex;
+			flex-flow: column;
 			margin: 1.5rem;
 		}
+
+		div.list-of-speakers div.comment {margin-top: auto;}
 		div.highlight a, div.highlight a:visited {font-size: 1.2rem;}
 		aside.h-event ul::before {
 	    top: -143px;

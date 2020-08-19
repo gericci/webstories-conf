@@ -4,12 +4,35 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#F57F20">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="@webstoriesconf">
+	<meta property="og:url" content="https://webstoriesconf.com/{{ permalink }}" />
+	<meta property="og:title" content="{{ title }}" />
+{% if ogdescription %}
+	<meta property="og:description" content="{{ ogdescription }}" />
+{% else %}
+	<meta property="og:description" content="A one-day, one-track, non-profit conference for those who love the web." />
+{% endif %}
+{% if ogimage %}
+	<meta property="og:image" content="https://webstoriesconf.com/img/{{ ogimage }}" />
+	<meta name="twitter:image" content="https://webstoriesconf.com/img/{{ ogimage }}" />
+{% else %}
+	<meta property="og:image" content="https://webstoriesconf.com/img/touch-icon-iphone-retina.png" />
+	<meta name="twitter:image" content="https://webstoriesconf.com/img/touch-icon-iphone-retina.png" />
+{% endif %}
+	<link rel="apple-touch-icon" href="{{base}}img/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{base}}img/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="{{base}}img/touch-icon-ipad-retina.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{base}}img/touch-icon-iphone-retina.png">
+	<meta name="description" content="WebStories Lille is a one-day, one-track, non-profit conference for those who love the web" />
+	<meta name="keywords" content="Web design, CSS, CSS3, HTML, HTML5, Javascript, Accessibility, Usability, Web Standards, Responsive Web Design" />
 	<link rel="shortcut icon" href="{{ base }}img/favicon.png" />
 	<title>{{ title }} : WebStories Conference - Lille</title>
 	<link rel="preload" href="{{ base }}css/lato-regular-webfont.woff2" as="font" type="font/woff2">
 	<!-- STYLESHEET -->
-	<link href="{{ base }}css/main.css" rel="stylesheet" media="all" />
-	<link href="{{ base }}css/queries.css" rel="stylesheet" media="all" />
+	<link href="{{ base }}css/main.css" rel="preload" media="all" />
+	<link href="{{ base }}css/queries.css" rel="preload" media="all" />
 </head>
 
 <body id="inner">
@@ -59,7 +82,6 @@
 	    </footer>
     </div>
   </div>
-	<p class="go-top"><a href="#container">Top</a></p>
 
 	<!-- Here go your plugins -->
 	{% if altscript %}
