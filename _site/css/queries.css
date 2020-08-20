@@ -36,9 +36,11 @@
 		}
 		div.list-of-speakers .photo {width: 200px;}
 		div.list-of-speakers h3 {
+			font-size: 1.5em;
+			text-align: center;
 		}
 		div.list-of-speakers div.content {
-			margin-top: 58px;
+			margin-top: 1rem;
 		}
 		aside.h-event p.p-date {font-size: 1.1em;}
 
@@ -122,7 +124,7 @@
 			margin: 1.5rem;
 		}
 
-		div.list-of-speakers div.comment {margin-top: auto;}
+		div.list-of-speakers p.social {margin-top: auto;}
 		div.highlight a, div.highlight a:visited {font-size: 1.2rem;}
 		aside.h-event ul::before {
 	    top: -143px;

@@ -355,7 +355,7 @@ div.highlight {
 }
 	div.highlight p:not(.register) {font-size: 1.1em;}
 
-	div.highlight p.register {font-size: 80%; margin-top: 2rem;}
+	div.highlight p.register {margin-top: 2rem;}
 
 		div.highlight p.register a, div.highlight p.register a:visited {
 			color: var(--body-text);
