@@ -7,7 +7,8 @@ const filesToCache = [
   '/css/baijamjuree-light-webfont.woff',
   '/css/baijamjuree-regular-webfont.woff',
   '/css/baijamjuree-semibold-webfont.woff',
-  '/img/logo-sml.svg'
+  '/img/webstories-logo.svg',
+  '/img/background-top.svg'
 ];
 
 self.addEventListener('install', function(e) {
