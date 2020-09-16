@@ -435,6 +435,8 @@ div.list-of-speakers .photo::before {
 
 	div.list-of-speakers a:link {color: var(--body-bg);}
 
+div.presentation p {margin-bottom: 2rem;}
+
 div.comment {
 	font-family: var(--stack-l);
 	text-align: center;
