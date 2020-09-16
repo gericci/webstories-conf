@@ -61,6 +61,7 @@
 
 	h1 {font-size: 3rem;}
 	[role="doc-subtitle"] {font-size: 1.2em;}
+	div.intro {height: 36vh;}
 
 	div.list-of-speakers p {font-size: 1em;}
 
