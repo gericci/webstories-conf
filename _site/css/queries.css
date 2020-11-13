@@ -119,7 +119,6 @@
 		}
 		div.list-of-speakers div.content {margin: 1rem 0 3rem;}
 		div.list-of-speakers article {
-			flex: 1;
 			display: flex;
 			flex-flow: column;
 			margin: 1.5rem;
