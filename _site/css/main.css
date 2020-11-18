@@ -454,6 +454,15 @@ p.social {
 	margin-top: 1rem;
 }
 
+#sponsor {
+	background-color: rgba(255,255,255,0.15);
+	padding-bottom: 2rem;
+}
+#sponsor h2 {background-color: rgba(255,255,255,0);}
+#sponsor a, #sponsor a:visited {
+	color: var(--main-color);
+	background-color: rgba(255,255,255,0);
+}
 
 /* ------------------------- INNER PAGES ---------------------------- */
 
