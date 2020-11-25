@@ -1,4 +1,4 @@
-const cacheName = 'ws-03';
+const cacheName = 'ws-035';
 
 const filesToCache = [
   '/',

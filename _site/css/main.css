@@ -260,7 +260,7 @@ aside.h-event {
 	display: flex;
 	flex-flow: column;
 	background-color: rgba(11,169,146,0.3);
-	padding: 5vh 10%;
+	padding: 4rem 10%;
 }
 	aside.h-event h2 {
 		background-color: rgba(11,169,146,0);
@@ -401,7 +401,6 @@ div.highlight {
 	}
 
 div.list-of-speakers article {
-	max-width: 300px;
 	color: var(--body-bg);
 	background-color: var(--body-text);
 	padding: 1rem;
