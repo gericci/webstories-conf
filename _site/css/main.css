@@ -411,6 +411,7 @@ div.list-of-speakers article {
 
 div.list-of-speakers p {font-size: 0.9em;}
 div.list-of-speakers .photo {
+	position: relative;
 	max-width: 250px;
 	margin: 1rem auto;
 	filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.5));
