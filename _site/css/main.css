@@ -483,7 +483,9 @@ ul.list-sponsors li {
 	flex-basis: 200px;
 	margin: 2rem;
 }
-ul.list-sponsors li.square {flex-basis: 140px;}
+ul.list-sponsors li.square {
+	flex-basis: 120px;
+}
 
 
 /* ------------------------- INNER PAGES ---------------------------- */
