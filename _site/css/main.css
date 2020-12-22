@@ -479,12 +479,32 @@ ul.list-sponsors {
 	margin-bottom: 2rem;
 }
 
+ul.list-sponsors.gold {position: relative;}
+ul.list-sponsors.gold::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 10%;
+	height: 1px;
+	bottom: 0;
+	left: 45%;
+	background-color: var(--body-text);
+}
+
 ul.list-sponsors li {
-	flex-basis: 200px;
+	flex-basis: 130px;
 	margin: 2rem;
 }
 ul.list-sponsors li.square {
-	flex-basis: 120px;
+	flex-basis: 100px;
+}
+
+ul.list-sponsors.gold li {
+	flex-basis: 250px;
+	margin: 2rem;
+}
+ul.list-sponsors.gold li.square {
+	flex-basis: 180px;
 }
 
 
