@@ -470,6 +470,10 @@ div.sponsors {
 	margin-bottom: 2rem;
 }
 
+#sponsor div.presentation {
+	margin: 0 10%;
+}
+
 ul.list-sponsors {
 	display: flex;
 	flex-wrap: wrap;
@@ -506,6 +510,35 @@ ul.list-sponsors.gold li {
 ul.list-sponsors.gold li.square {
 	flex-basis: 180px;
 }
+
+/* ------------------------------ AGENDA ------------------- */
+
+
+div.hour {margin-bottom: 2rem;}
+div.hour + div.hour {
+	padding-top: 2rem;
+	border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+	div.hour h3 {margin-bottom: 0.3em;}
+		div.hour h3 img {
+			position: relative;
+			top: 2px;
+			width: 18px;
+			height: 18px;
+		}
+		div.hour h3 time {color: var(--main-color);}
+
+	div.hour dt {
+		display: block;
+		font: bold 1.2em/1.1 var(--stack);
+		color: var(--body-bg);
+		background-color: var(--main-color);
+		padding: 0.2em 0.3em;
+		margin-bottom: 0.5em;
+		margin-left: -0.3em;
+	}
+
 
 
 /* ------------------------- INNER PAGES ---------------------------- */

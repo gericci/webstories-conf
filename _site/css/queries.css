@@ -67,6 +67,27 @@
 }
 
 
+@media screen and (min-width: 860px) {
+
+	div.hour {
+		display: flex;
+		justify-content: space-between;
+		max-width: 900px;
+		margin: 0 auto 2rem;
+	}
+		div.hour h3 {flex-basis: 25%;}
+		div.hour dl {margin-top: 0.2em;}
+		div.hour .speaker {
+			display: block;
+			font-size: 0.9em;
+		}
+
+	div.hour div.content {
+		flex-basis: 70%;
+	}
+}
+
+
 @media screen and (min-width: 1100px) {
 	#container {padding-top: 6rem;}
 	header {margin: 6rem 5% 0;}
@@ -107,7 +128,7 @@
 	section {padding-top: 10rem;}
 	section .go-top {top: 75px;}
 
-	div.presentation {
+	div.presentation, #sponsor div.presentation {
 		width: 45em;
 		text-align: center;
 		margin: 0 auto 2rem;
@@ -151,6 +172,11 @@
 		article.editorial p, article.editorial li {
 			font-size: 1.3em;
 		}
+
+	#agenda div.presentation {margin-bottom: 6rem;}
+
+	div.hour dt {font-size: 1.5em;}
+	div.hour dd {font-size: 1.1em;}
 }
 
 
